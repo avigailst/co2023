@@ -30,9 +30,9 @@ class WordListArange:
         data_arange.sort_values(by=['doc_count'])
         data_arange['word'].replace(to_replace='', value=np.nan, inplace=True)
         data_arange.dropna(subset=['word'], inplace=True)
-        filepath = Path(self.file_name)
-        filepath.parent.mkdir(parents=True, exist_ok=True)
-        data_arange.to_csv(filepath)
+        # filepath = Path(self.file_name)
+        # filepath.parent.mkdir(parents=True, exist_ok=True)
+        # data_arange.to_csv(filepath)
         return data_arange
 
 
